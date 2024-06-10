@@ -1,0 +1,24 @@
+main {
+    background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    position: relative;
+    text-align: center;
+    font-family: 'Inter';
+    margin : 3% auto auto auto;
+    display: grid;
+}
+
+.footer-container{
+    font-family: "Ubuntu";
+    font-weight: 300;
+    text-align: center;
+   height : 30px;
+   margin-top: -30px;
+    background-color: #eeeeee;
+}
+
+.footer-content {
+    margin: 30px auto;
+    text-align: center;
+    opacity: 0.6;
+}

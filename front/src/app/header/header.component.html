@@ -1,0 +1,40 @@
+<header>
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-color: #50c6d8;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="header-title">Konectoi</h1>
+            <h4>Connexion sécurisée</h4>
+          </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNavAltMarkup"
+            mdbCollapse
+          >
+            <div class="navbar-nav" *ngIf="!this.tokenService.isLogged()">
+                <a class="nav-link" routerLink="/login" routerLinkActive="active-link">Connexion</a>
+                <a class="nav-link" routerLink="/signup" routerLinkActive="active-link">Inscription</a>
+            </div>
+            <div class="navbar-nav" *ngIf="this.tokenService.isLogged()">
+                <a class="nav-link" routerLink="/update">Modifier profil</a>
+                <a class="nav-link" (click)="logOut()" routerLink="/login">Se déconnecter</a>
+                <!-- <a class="nav-link" routerLink="/test">Test</a> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+  </header>
